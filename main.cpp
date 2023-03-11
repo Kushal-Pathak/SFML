@@ -2,13 +2,12 @@
 #include <iostream>
 
 int main() {
-	sf::RenderWindow window(sf::VideoMode(800, 800), "My Window");
-	sf::Texture texture;
-	sf::Sprite sprite;
-	if (!texture.loadFromFile("img.jpg")) {
-		std::cout << "Error loading image" << std::endl;
-	}
-	sprite.setTexture(texture);
+	sf::RenderWindow window(sf::VideoMode(800, 600), "My Window");
+	
+	sf::CircleShape circle(50.0f);
+	circle.setFillColor(sf::Color::Green);
+	circle.setOutlineThickness(10.0f);
+	circle.setOutlineColor(sf::Color::Red);
 	while (window.isOpen()) {
 		sf::Event event;
 		while (window.pollEvent(event)) {
@@ -17,7 +16,7 @@ int main() {
 			}
 		}
 		window.clear(sf::Color::Black);
-		window.draw(sprite);
+		window.draw(circle);
 		window.display();
 	}
 }
