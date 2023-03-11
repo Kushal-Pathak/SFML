@@ -5,6 +5,7 @@ int main() {
 	sf::RenderWindow window(sf::VideoMode(800, 600), "My Window");
 	
 	sf::CircleShape circle(50.0f);
+	circle.setPosition(100.f, 100.f);
 	circle.setFillColor(sf::Color::Green);
 	circle.setOutlineThickness(10.0f);
 	circle.setOutlineColor(sf::Color::Red);
